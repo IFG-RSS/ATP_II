@@ -508,3 +508,7 @@ int main() {
 Vetores são a base para o estudo de estruturas de dados em programação. Eles permitem armazenar vários valores do mesmo tipo sob um único nome, reduzindo repetição de código e facilitando a resolução de problemas com listas, séries, notas, idades, medidas e outros conjuntos lineares de dados.
 
 O domínio de índices, laços e operações básicas com vetores é essencial para compreender estruturas mais complexas, como matrizes, strings, registros com vetores internos e arquivos de dados.
+
+## 🌐 Complemente seu estudo na web
+
+[W3-Schools - Arrays](https://www.w3schools.com/c/c_arrays.php)

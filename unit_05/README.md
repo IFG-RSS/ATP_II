@@ -232,3 +232,9 @@ Strings são arrays de caracteres, logo também são ponteiros.
 A recursividade é uma ferramenta poderosa para resolução de problemas estruturados, enquanto os ponteiros fornecem controle direto sobre a memória.
 
 A combinação desses conceitos permite desenvolver soluções eficientes e flexíveis, sendo fundamentais para programação em baixo nível e para compreensão profunda do funcionamento dos sistemas computacionais.
+
+## 🌐 Complemente seu estudo na web
+
+[C Functions](https://www.w3schools.com/c/c_functions.php)
+
+[C Function Parameters](https://www.w3schools.com/c/c_functions_parameters.php)

@@ -589,3 +589,7 @@ se (identidade) então {
 Matrizes ampliam o conceito de vetor ao permitir a organização de dados em múltiplas dimensões. Elas são especialmente úteis para representar tabelas, mapas, tabuleiros, planilhas, notas, imagens e estruturas matemáticas.
 
 O domínio de laços aninhados, índices de linha e coluna, diagonais, transposição e modularização é essencial para resolver problemas mais complexos e preparar o estudante para estruturas de dados heterogêneas, arquivos e projetos completos em C.
+
+## 🌐 Complemente seu estudo na web
+
+[W3-Schools - Arrays](https://www.w3schools.com/c/c_arrays.php)
