@@ -1,240 +1,155 @@
-# 📘 Unidade 5 — Modularização: Recursividade e Ponteiros
+# 📘 Unidade 5 — Recursividade, Ponteiros, Arrays e Strings
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
+
+---
 
 ## 🎯 1. Objetivos da Aula
 
-* Compreender o conceito de recursividade;
-* Diferenciar soluções iterativas e recursivas;
-* Identificar caso base e caso recursivo;
-* Entender o conceito de ponteiros;
-* Relacionar ponteiros com passagem por referência;
-* Compreender por que arrays e strings são ponteiros;
-* Aplicar esses conceitos em exemplos práticos.
+- Compreender o conceito de **recursividade**;
+- Identificar caso base e passo recursivo;
+- Introduzir o conceito de **ponteiros** em C;
+- Relacionar ponteiros com passagem por referência;
+- Compreender que arrays e strings possuem relação direta com endereços de memória;
+- Desenvolver funções recursivas simples e manipulações iniciais com ponteiros.
+
+---
 
 ## 🔁 2. Recursividade
 
 ### 🔹 Definição
 
-Recursividade é uma técnica onde uma função chama a si mesma para resolver um problema.
+Uma função recursiva é uma função que chama a si mesma para resolver uma versão menor do problema.
 
-### 🔹 Estrutura de uma Função Recursiva
+### 🔹 Estrutura básica
 
-Uma função recursiva deve ter:
+Toda recursão precisa de:
 
-* **Caso base** → condição de parada
-* **Caso recursivo** → chamada da própria função
+- **Caso base:** condição de parada;
+- **Passo recursivo:** chamada da função para um problema menor.
 
-### 🔹 Exemplo Clássico: Fatorial
+### 🔹 Exemplo: fatorial
 
-```PEQUI
-inteiro fatorial(n){
-    se n = 0
-        retorne 1;
-    senão
-        retorne n * fatorial(n - 1);
+```c
+int fatorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+    return n * fatorial(n - 1);
 }
 ```
 
-### 🔍 Execução (fatorial de 3)
+---
 
-```text
-    fatorial(3)
-    → 3 * fatorial(2)
-    → 3 * (2 * fatorial(1))
-    → 3 * (2 * (1 * fatorial(0)))
-    → 3 * 2 * 1 * 1 = 6
-```
-
-### 🔹 Exemplo: Soma Recursiva
-
-```PEQUI
-    inteiro soma(n){
-        se n = 0
-            retorne 0;
-        senão
-            retorne n + soma(n - 1);
-    }   
-    
-```
-
-### ⚠️ Cuidados com Recursividade
-
-* Esquecer o caso base → loop infinito;
-* Alto consumo de memória (pilha);
-* Pode ser menos eficiente que iteração.
-
-## 🔄 3. Recursivo vs Iterativo
-
-| Aspecto            | Recursivo                 | Iterativo        |
-|:-------------------|:--------------------------|:-----------------|
-| **Clareza**        | Alta (problemas naturais) | Média            |
-| **Performance**    | Pode ser menor            | Geralmente maior |
-| **Uso de memória** | Alto (pilha)              | Baixo            |
-
-## 🧠 4. Ponteiros — Conceito Fundamental
+## 📍 3. Ponteiros
 
 ### 🔹 Definição
 
 Um ponteiro é uma variável que armazena o endereço de memória de outra variável.
 
-👉 **Em vez de guardar o valor, ele guarda onde o valor está.**
-
-### 🔹 Representação Conceitual
-
-```
-    inteiro x = 10;
-    ponteiro p = <endereço de> x;
+```c
+int x = 10;
+int *p = &x;
 ```
 
-### 🔹 Interpretação
+### 🔹 Operadores principais
 
-* `x` → valor = 10
-* `p` → aponta para `x`
+| Operador | Significado |
+|---|---|
+| `&` | Obtém o endereço de uma variável |
+| `*` | Acessa o conteúdo apontado pelo ponteiro |
 
-## 🔗 5. Ponteiros e Passagem por Referência
+---
 
-A passagem por referência é implementada usando ponteiros.
+## 🔄 4. Ponteiros e Passagem por Referência
 
-### 🔹 Exemplo Conceitual
+Em C, a passagem por referência é realizada com ponteiros.
 
-```PEQUI
-    void alterarValor(ref x){
-        x = x + 5;
-    }
+```c
+void alterar(int *x) {
+    *x = *x + 10;
+}
+
+int main() {
+    int valor = 5;
+    alterar(&valor);
+    printf("%d", valor);
+    return 0;
+}
 ```
 
-👉 **Internamente:** `x` é um ponteiro para a variável original.
+Resultado: `15`.
 
-### 🔹 Analogia
+---
 
-* **Valor** → cópia do conteúdo
-* **Referência** → acesso direto ao endereço
+## 🧩 5. Arrays e Strings como Estruturas Relacionadas a Ponteiros
 
-## 📦 6. Arrays são Ponteiros
+Em C, o nome de um vetor representa o endereço do primeiro elemento.
 
-### 🔹 Conceito
-
-Em linguagens como C: O nome de um array representa o endereço do primeiro elemento.
-
-### 🔹 Exemplo
-
-```PEQUI
-    inteiro vetor[3] = {1, 2, 3};
+```c
+int numeros[3] = {10, 20, 30};
+printf("%d", numeros[0]);
 ```
 
-👉 `vetor` aponta para o primeiro elemento (`vetor[0]`)
+Strings são vetores de caracteres terminados por `\0`.
 
-### 🔹 Uso em Funções
-
-```
-    void imprimirVetor(v){
-        escreva(v[0], v[1], v[2])]
-    }
+```c
+char nome[20] = "Ana";
 ```
 
-👉 O vetor é passado por referência (ponteiro).
+---
 
-### 🔹 Consequência
+## ⚠️ 6. Cuidados Importantes
 
-Alterar o vetor dentro da função → altera o original.
+- Toda recursão precisa de caso base;
+- Ponteiros não inicializados podem causar erros graves;
+- Ao usar ponteiros, diferencie endereço e conteúdo;
+- Strings precisam de espaço para o caractere `\0`;
+- Teste funções recursivas com valores pequenos.
 
-## 🔤 7. Strings são Ponteiros
+---
 
-### 🔹 Conceito
-
-Strings são arrays de caracteres, logo também são ponteiros.
-
-### 🔹 Exemplo
-
-```PEQUI
-    char nome[] = "Ana"
-```
-
-👉 **Internamente:** `'A' 'n' 'a' '\0'`
-
-### 🔹 Uso em Funções
-
-```PEQUI
-    void alterarNome(nome){
-        nome[0] = 'M';
-    }
-```
-
-👉 Modifica diretamente a string original.
-
-## ⚠️ 8. Cuidados com Ponteiros
-
-* Acesso à memória inválida;
-* Modificações indesejadas;
-* Dificuldade de depuração;
-* Necessidade de controle rigoroso.
-
-## 🧪 9. Exemplo Integrado
-
-```PEQUI
-    inteiro fatorial(n){
-        se n = 0 
-            retorne 1;
-        senão
-            retorne n * fatorial(n - 1);
-    }
-    
-    void dobrarVetor(v){
-        v[0] = v[0] * 2;
-        v[1] = v[1] * 2;
-    }
-    
-    algoritmo principal{
-        inteiro resultado;
-        inteiro vetor[2] = {2, 3};
-    
-        resultado = fatorial(4);
-        escreva(resultado);
-    
-        dobrarVetor(vetor);
-        escreva(vetor[0], vetor[1]);
-    }
-```
-
-## ⚙️ 10. Boas Práticas
-
-* Sempre definir caso base em recursão;
-* Evitar recursão profunda sem necessidade;
-* Usar ponteiros com cuidado;
-* Documentar funções que alteram dados externos;
-* Testar funções com dados simples antes de escalar.
-
-## 📝 11. Lista de Exercícios
+## 📝 7. Lista de Exercícios
 
 ### 🔹 Nível Básico
 
 1. O que é recursividade?
-2. O que é caso base?
+2. Explique o que é caso base.
 3. O que é um ponteiro?
-4. Por que arrays são considerados ponteiros?
+4. Qual a diferença entre `&x` e `*p`?
 
 ### 🔹 Nível Intermediário
 
-5. Escreva uma função recursiva para calcular a soma de 1 até n.
-6. Explique a diferença entre passagem por valor e por referência usando ponteiros.
-7. O que acontece ao alterar um array dentro de uma função?
-8. Explique por que strings são ponteiros.
+5. Implemente uma função recursiva para calcular o fatorial de um número.
+6. Implemente uma função recursiva para imprimir números de 1 até `n`.
+7. Crie uma função que receba um ponteiro para inteiro e dobre seu valor.
+8. Explique por que arrays podem ser tratados como endereços em C.
 
 ### 🔹 Nível Avançado
 
-9. Implemente uma função recursiva para calcular potência (base^expoente).
-10. Desenvolva um algoritmo que:
-    * Receba um vetor;
-    * Use ponteiros para modificar seus valores;
-    * Exiba o resultado antes e depois da modificação.
-
-## 📌 Encerramento
-
-A recursividade é uma ferramenta poderosa para resolução de problemas estruturados, enquanto os ponteiros fornecem controle direto sobre a memória.
-
-A combinação desses conceitos permite desenvolver soluções eficientes e flexíveis, sendo fundamentais para programação em baixo nível e para compreensão profunda do funcionamento dos sistemas computacionais.
+9. Implemente uma função recursiva que calcule a soma dos elementos de um vetor.
+10. Crie uma função que receba uma string e conte quantos caracteres ela possui, sem usar `strlen`.
+11. Explique os riscos de uma função recursiva sem caso base.
+12. Crie um programa que use ponteiros para trocar o valor de duas variáveis inteiras.
 
 ## 🌐 Complemente seu estudo na web
 
-[C Functions](https://www.w3schools.com/c/c_functions.php)
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
 
-[C Function Parameters](https://www.w3schools.com/c/c_functions_parameters.php)
+- 🔎 **Pesquise por:** `recursividade em C`; `ponteiros em C`; `arrays e ponteiros C`; `strings em C char array`.
+- 📚 **Leia materiais introdutórios sobre:** recursividade, ponteiros, arrays e strings na linguagem C.
+- 💻 **Pratique com:** fatorial, contagem recursiva, troca de valores com ponteiros e manipulação básica de strings.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.
+
+## 📌 Encerramento
+
+Recursividade e ponteiros ampliam a capacidade de resolver problemas em C, mas exigem atenção. Esses conceitos serão importantes para compreender passagem por referência, manipulação de vetores, strings, registros e arquivos.

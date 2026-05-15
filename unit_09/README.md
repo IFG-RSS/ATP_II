@@ -1,4 +1,13 @@
 # 📘 Unidade 9 — Arquivos: Armazenamento de Registros em Memória Secundária
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
 
 ---
 
@@ -937,7 +946,13 @@ Nesta unidade, os registros deixam de existir apenas durante a execução do pro
 
 O domínio de arquivos é um passo essencial para a construção de sistemas mais completos, pois aproxima os algoritmos acadêmicos de aplicações reais com armazenamento permanente de informações.
 
-
 ## 🌐 Complemente seu estudo na web
 
-[W3-Schools - C-Files](https://www.w3schools.com/c/c_files.php)
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
+
+- 🔎 **Pesquise por:** `arquivos em C fopen fclose`; `fprintf fscanf C`; `fread fwrite C`; `persistência de registros C`.
+- 📚 **Leia materiais introdutórios sobre:** arquivos, persistência, armazenamento de registros em memória secundária, arquivos texto e binários.
+- 💻 **Pratique com:** gravação e leitura de cadastros usando arquivos de texto e arquivos binários.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.

@@ -1,4 +1,13 @@
 # 📘 Unidade 7 — Estruturas de Dados: Variáveis Compostas Homogêneas Multidimensionais (Matrizes)
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
 
 ---
 
@@ -584,12 +593,19 @@ se (identidade) então {
 
 ---
 
+## 🌐 Complemente seu estudo na web
+
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
+
+- 🔎 **Pesquise por:** `matrizes em C`; `arrays bidimensionais C`; `matriz transposta C`; `matriz identidade C`.
+- 📚 **Leia materiais introdutórios sobre:** matrizes, índices bidimensionais, linhas, colunas, diagonal e transposta.
+- 💻 **Pratique com:** operações com linhas, colunas, diagonal principal, matriz identidade e transposição.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.
+
 ## 📌 Encerramento
 
 Matrizes ampliam o conceito de vetor ao permitir a organização de dados em múltiplas dimensões. Elas são especialmente úteis para representar tabelas, mapas, tabuleiros, planilhas, notas, imagens e estruturas matemáticas.
 
 O domínio de laços aninhados, índices de linha e coluna, diagonais, transposição e modularização é essencial para resolver problemas mais complexos e preparar o estudante para estruturas de dados heterogêneas, arquivos e projetos completos em C.
-
-## 🌐 Complemente seu estudo na web
-
-[W3-Schools - Arrays](https://www.w3schools.com/c/c_arrays.php)

@@ -1,243 +1,157 @@
-# 📘 Unidade 1 — Apresentação da Disciplina e Introdução à Modularização
+# 📘 Unidade 1 — Apresentação da Disciplina, Introdução à ATP II e Ambiente de Desenvolvimento
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
 
 ---
 
 ## 🎯 1. Objetivos da Aula
 
-- Compreender a organização da disciplina (plano de ensino);
-- Entender o que são algoritmos estruturados;
-- Introduzir o conceito de **modularização**;
-- Reconhecer a importância da decomposição de problemas;
-- Relacionar modularização com **reutilização de código e bibliotecas**.
+- Apresentar a disciplina **Algoritmos e Técnicas de Programação II**;
+- Compreender a continuidade entre ATP I e ATP II;
+- Revisar a importância da lógica de programação para a Engenharia de Software;
+- Conhecer o ambiente de desenvolvimento utilizado na disciplina;
+- Entender o processo básico de escrita, compilação, execução e depuração de programas;
+- Preparar o estudante para o desenvolvimento de programas em linguagem C.
 
 ---
 
-## 📖 2. Apresentação do Plano de Ensino
+## 🧠 2. O que é ATP II?
 
-O plano de ensino é o documento que orienta toda a disciplina. Ele define:
+A disciplina de **Algoritmos e Técnicas de Programação II** aprofunda os fundamentos de programação já estudados em disciplinas introdutórias.
 
-- **Objetivos gerais e específicos** → o que se espera que o aluno aprenda;
-- **Conteúdo programático** → tópicos que serão estudados;
-- **Metodologia** → como as aulas serão conduzidas (teóricas, práticas, projetos);
-- **Avaliação** → critérios (provas, trabalhos, participação);
-- **Cronograma** → distribuição dos conteúdos ao longo do tempo.
+Nesta unidade curricular, o estudante passa a trabalhar com problemas mais estruturados, utilizando:
 
-👉 **Importância:**  
-Permite ao aluno planejar seus estudos e compreender claramente as expectativas da disciplina.
+- Modularização;
+- Funções e procedimentos;
+- Escopo de variáveis;
+- Passagem de parâmetros;
+- Vetores;
+- Matrizes;
+- Registros;
+- Arquivos;
+- Organização de programas maiores.
 
----
-
-## 🧠 3. Introdução aos Algoritmos Estruturados
-
-Um **algoritmo** é uma sequência finita de passos bem definidos para resolver um problema.
-
-### 🔹 Características de um bom algoritmo
-
-- **Finitude** → sempre termina;
-- **Precisão** → não ambíguo;
-- **Entrada e saída definidas**;
-- **Efetividade** → passos executáveis.
-
-### 🔹 Estruturas Fundamentais
-
-A programação estruturada é baseada em três estruturas de controle:
-
-1. **Sequência** → execução linear de instruções
-2. **Seleção** → tomada de decisão (if/else)
-3. **Repetição** → execução iterativa (while, for)
+👉 A disciplina tem foco na construção de programas corretos, organizados, legíveis e progressivamente mais próximos da prática profissional.
 
 ---
 
-## 🧩 4. Introdução à Modularização
+## 🖥️ 3. Ambiente de Desenvolvimento
 
-### 🔹 Definição
+O desenvolvimento dos programas poderá ser realizado em uma IDE ou editor de código compatível com a linguagem C.
 
-**Modularização** é o processo de dividir um problema complexo em partes menores chamadas **módulos**, cada uma com responsabilidade bem definida.
+### 🔹 Elementos básicos do ambiente
 
-### 🔹 Características dos Módulos
+- Editor de código;
+- Compilador C;
+- Terminal ou console;
+- Ferramentas de execução;
+- Ferramentas de depuração.
 
-- Independência lógica;
-- Responsabilidade única;
-- Facilidade de teste;
-- Possibilidade de reutilização.
+### 🔹 Fluxo básico de desenvolvimento
 
----
-
-### 🔹 Exemplo Conceitual
-
-**Problema:** Sistema de cadastro de alunos.
-
-**Sem modularização:**
-- Um único bloco de código executa todas as tarefas.
-
-**Com modularização:**
-- `cadastrarAluno();`
-- `validarDados();`
-- `exibirInformacoes();`
-- `salvarDados();`
+```text
+1. Escrever o código-fonte
+2. Salvar o arquivo
+3. Compilar
+4. Corrigir erros de compilação
+5. Executar
+6. Testar a lógica
+7. Depurar, se necessário
+```
 
 ---
 
-### 🔹 Vantagens da Modularização
+## 🧪 4. Primeiro Programa em C
 
-- Redução da complexidade;
-- Melhoria da legibilidade;
-- Facilidade de manutenção;
-- Reutilização de código;
-- Suporte ao desenvolvimento colaborativo.
+```c
+#include <stdio.h>
 
----
-
-### 🔹 Conceitos Fundamentais
-
-- **Abstração** → focar no essencial;
-- **Decomposição** → dividir o problema;
-- **Coesão** → módulo com responsabilidade clara;
-- **Acoplamento** → baixo nível de dependência entre módulos.
-
----
-
-## 🧾 5. Exemplo Prático: Módulo de Validação de CPF
-
-### 🔹 Contexto
-
-O CPF é um identificador amplamente utilizado em diversos sistemas:
-
-- Sistemas de cadastro
-- Aplicações financeiras
-- Sistemas governamentais
-- Plataformas de e-commerce
-
-👉 A validação deve ser consistente em todo o sistema, justificando a criação de um **módulo reutilizável**.
-
----
-
-### 🔹 Responsabilidades do Módulo
-
-- Normalizar entrada (remover pontos e traços);
-- Verificar tamanho (11 dígitos);
-- Identificar sequências inválidas (ex: todos os dígitos iguais);
-- Calcular e validar dígitos verificadores;
-- Retornar resultado booleano (válido/inválido).
-
----
-
-### 🔹 Pseudocódigo do Módulo
-
-```PEQUI
-lógico validarCPF(cpf: cadeia){
-
-    cpf ← removerCaracteresNaoNumericos(cpf);
-
-    se comprimento(cpf) <> 11{
-        retorne falso;
-    }
-
-    se todosDigitosIguais(cpf){
-        retorne falso;
-    }
-
-    digito1 ← calcularPrimeiroDigito(cpf);
-    digito2 ← calcularSegundoDigito(cpf);
-
-    se (digito1 = obterDigito(cpf, 10)) e (digito2 = obterDigito(cpf, 11)) {
-        retorne verdadeiro;
-    }
-    senão{
-        retorne falso;
-    }
+int main() {
+    printf("Bem-vindo a ATP II!\n");
+    return 0;
 }
 ```
 
-### 🔹 Reutilização no Sistema
+### 🔍 Análise
 
-O módulo pode ser utilizado em:
+- `#include <stdio.h>` inclui a biblioteca padrão de entrada e saída;
+- `int main()` define a função principal do programa;
+- `printf` exibe uma mensagem na tela;
+- `return 0` indica que o programa terminou corretamente.
 
-- Cadastro de usuários
-- Atualização cadastral
-- Validação de formulários
-- Integração com serviços externos
+---
 
-### 📌 Impacto direto:
+## 🐞 5. Introdução à Depuração
 
-* Elimina duplicação de código;
-* Garante padronização;
-* Reduz inconsistências.
+Depurar significa acompanhar a execução do programa para encontrar erros.
 
-## 📦 6. Modularização e Bibliotecas de Código
-### 🔹 Conceito de Biblioteca
+### 🔹 Erros comuns no início
 
-Uma biblioteca de código é um conjunto estruturado de funções ou módulos reutilizáveis, projetados para serem utilizados em múltiplos sistemas.
+| Tipo de erro | Exemplo |
+|---|---|
+| Sintático | Esquecer `;` no fim de uma linha |
+| Semântico | Usar uma variável com valor inadequado |
+| Lógico | O programa compila, mas gera resultado incorreto |
 
-### 🔹 Relação com Modularização
+### 🔹 Estratégias iniciais
 
-A modularização é o fundamento para criação de bibliotecas:
+- Ler as mensagens do compilador;
+- Testar o programa com entradas simples;
+- Inserir saídas intermediárias;
+- Executar o programa passo a passo quando possível.
 
-* Modularização	Biblioteca
-* Organização interna	Reutilização externa
-* Escopo local	Escopo global
-* Foco no problema atual	Foco em múltiplos projetos
-### 🔹 Evolução do Módulo para Biblioteca
+---
 
-O módulo de CPF pode ser integrado em uma biblioteca maior:
+## ✅ 6. Boas Práticas Iniciais
 
-```
-bibliotecaValidacoes
-    validarCPF();
-    validarEmail();
-    validarTelefone();
-    validarCEP();
-```
-### 🔹 Benefícios das Bibliotecas
-* Reutilização sistemática;
-* Padronização de regras;
-* Aumento da produtividade;
-* Redução de retrabalho;
-* Facilidade de manutenção e evolução.
-### 🔹 Analogia
-* Módulo → ferramenta individual
-* Biblioteca → conjunto organizado de ferramentas
-## 🧪 7. Exemplo de Estrutura Modular
-```PEQUI
-Algoritmo Principal {
-    chamar lerDados();
-    chamar validarCPF();
-    chamar processarDados();
-    chamar exibirResultado();
-}
-```
-## 📝 8. Lista de Exercícios
+- Escreva nomes claros para variáveis e funções;
+- Indente o código corretamente;
+- Teste pequenos trechos antes de ampliar o programa;
+- Evite copiar soluções prontas;
+- Documente partes importantes do código com comentários;
+- Faça os exercícios progressivamente.
+
+---
+
+## 📝 7. Lista de Exercícios
+
 ### 🔹 Nível Básico
 
-1. Defina algoritmo e cite duas características.
-
-2. Diferencie:
-   1. Sequência
-   2. Seleção
-   3. Repetição
-
-3. Explique modularização.
-
-4. Liste três vantagens da modularização.
+1. Explique com suas palavras o objetivo da disciplina ATP II.
+2. Descreva o fluxo básico de desenvolvimento de um programa em C.
+3. O que é compilar um programa?
+4. Qual é a função do comando `printf`?
 
 ### 🔹 Nível Intermediário
 
-5. Desenvolva um algoritmo para calcular a média de três notas (sem modularização).
-
-6. Reescreva o algoritmo anterior utilizando modularização.
-
-7. Explique coesão com exemplo.
-
-8. Explique acoplamento e sua importância.
+5. Crie um programa em C que exiba seu nome e o nome do curso.
+6. Crie um programa que leia dois números inteiros e exiba a soma.
+7. Liste três erros comuns que podem ocorrer durante a programação.
+8. Explique a diferença entre erro de compilação e erro lógico.
 
 ### 🔹 Nível Avançado
 
-9. Analise os benefícios de um módulo independente de validação de CPF.
+9. Escreva um pequeno programa em C com leitura, processamento e saída de dados.
+10. Explique como a depuração pode ajudar na correção de um programa que compila, mas apresenta resultado incorreto.
 
-10. Proponha uma biblioteca de validação contendo pelo menos cinco funções.
+## 🌐 Complemente seu estudo na web
+
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
+
+- 🔎 **Pesquise por:** `linguagem C introdução`; `compilador C gcc`; `depuração de código C`; `IDE para C`.
+- 📚 **Leia materiais introdutórios sobre:** introdução à linguagem C, ambiente de desenvolvimento, compilação e depuração.
+- 💻 **Pratique com:** programas simples de entrada, processamento e saída de dados.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.
 
 ## 📌 Encerramento
 
-A modularização é um princípio essencial na construção de software de qualidade. Ela permite organizar melhor a lógica, reduzir complexidade e preparar o sistema para evolução.
-
-A evolução natural da modularização leva à construção de bibliotecas reutilizáveis, fundamentais em ambientes profissionais, onde produtividade, padronização e manutenção são requisitos críticos.
+A Unidade 1 estabelece a base operacional da disciplina. Dominar o ambiente de desenvolvimento, compreender o fluxo de compilação e iniciar boas práticas desde o começo são passos fundamentais para avançar com segurança nos conteúdos de ATP II.

@@ -1,4 +1,13 @@
 # 📘 Unidade 6 — Estruturas de Dados: Variáveis Compostas Homogêneas Unidimensionais (Vetores)
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
 
 ---
 
@@ -503,12 +512,19 @@ int main() {
 
 ---
 
+## 🌐 Complemente seu estudo na web
+
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
+
+- 🔎 **Pesquise por:** `vetores em C`; `arrays unidimensionais C`; `percorrer vetor C`; `maior menor vetor C`.
+- 📚 **Leia materiais introdutórios sobre:** vetores, índices, percorrimento, busca, soma, média e maior/menor valor.
+- 💻 **Pratique com:** leitura, exibição, soma, média, contagem de pares e inversão de vetores.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.
+
 ## 📌 Encerramento
 
 Vetores são a base para o estudo de estruturas de dados em programação. Eles permitem armazenar vários valores do mesmo tipo sob um único nome, reduzindo repetição de código e facilitando a resolução de problemas com listas, séries, notas, idades, medidas e outros conjuntos lineares de dados.
 
 O domínio de índices, laços e operações básicas com vetores é essencial para compreender estruturas mais complexas, como matrizes, strings, registros com vetores internos e arquivos de dados.
-
-## 🌐 Complemente seu estudo na web
-
-[W3-Schools - Arrays](https://www.w3schools.com/c/c_arrays.php)

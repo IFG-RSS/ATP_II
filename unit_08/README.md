@@ -1,4 +1,13 @@
 # 📘 Unidade 8 — Estruturas de Dados: Variáveis Compostas Heterogêneas (Registros)
+---
+
+## 🪪 Identificação
+
+- 👨‍🏫 **Professor:** Prof. Rogério S. Silva
+- 📘 **Disciplina:** ATP-II (Algoritmos e Técnicas de Programação II)
+- 🏫 **Instituição:** Instituto Federal de Goiás — Campus Inhumas-GO
+
+---
 
 ---
 
@@ -117,7 +126,7 @@ struct Aluno aluno1;
 
 ---
 
-## 🏷️ 5. Uso de `typedef` com Registros em C
+## 🏷️ 5. Documento Extra — Uso de `typedef` com Registros em C
 
 Em C, `typedef` permite criar um **nome de tipo** a partir de uma estrutura. Isso torna o código mais legível, reduz repetições e aproxima a sintaxe da ideia de criar um novo tipo abstrato para representar uma entidade.
 
@@ -172,8 +181,8 @@ Aluno a2;
 ### ⚠️ Atenção
 
 - `typedef` **não cria uma variável**; ele cria um nome de tipo;
-- `typedef` **não elimina os campos**; o acesso continua a ser feito com `.` ou `->`;
-- Em geral, usam-se nomes de tipos com inicial maiúscula, como `Aluno`, `Produto`, `Data`.
+- `typedef` **não elimina os campos**; o acesso continua sendo feito com `.` ou `->`;
+- Em geral, usa-se nomes de tipos com inicial maiúscula, como `Aluno`, `Produto`, `Data`.
 
 ---
 
@@ -894,6 +903,17 @@ int buscarPorMatricula(Aluno turma[], int tamanho, int matriculaBuscada) {
 
 ---
 
+## 🌐 Complemente seu estudo na web
+
+Use a web como apoio para revisar conceitos, comparar explicações e praticar, mantendo o foco na implementação própria dos algoritmos.
+
+- 🔎 **Pesquise por:** `struct em C`; `typedef struct C`; `vetor de registros C`; `registro dentro de registro C`.
+- 📚 **Leia materiais introdutórios sobre:** registros, campos, vetores de registros, matrizes de registros, registros de registros e typedef struct.
+- 💻 **Pratique com:** cadastros de alunos, clientes, produtos e sistemas com registros compostos.
+- 🧪 **Teste no computador:** crie pequenos programas, compile, execute e depure os exemplos da unidade.
+- 🧭 **Compare abordagens:** observe como diferentes materiais explicam o mesmo conceito e registre as diferenças no seu caderno de estudos.
+- ⚠️ **Cuidado:** use materiais da web como apoio, mas implemente os algoritmos por conta própria, testando cada solução no computador.
+
 ## 📌 Encerramento
 
 Registros permitem representar entidades mais próximas da realidade, agrupando campos de diferentes tipos em uma mesma estrutura. Enquanto vetores e matrizes organizam coleções homogêneas, os registros possibilitam modelar dados compostos, como alunos, disciplinas, produtos, atividades e compromissos.
@@ -901,8 +921,3 @@ Registros permitem representar entidades mais próximas da realidade, agrupando 
 O uso de `typedef` torna a escrita em C mais limpa e facilita o uso de registros como tipos definidos pelo programador. Já os registros de registros permitem organizar melhor entidades complexas, evitando estruturas excessivamente grandes e favorecendo modularização, legibilidade e manutenção.
 
 O domínio de registros, `typedef`, registros de registros, vetores de registros, matrizes de registros e registros com vetores internos é fundamental para construir programas mais completos, organizados e próximos de sistemas reais. Esse conteúdo também prepara o estudante para manipulação de arquivos, persistência de dados e desenvolvimento de projetos maiores em linguagem C.
-
-
-## 🌐 Complemente seu estudo na web
-
-[W3-Schools - Structs](https://www.w3schools.com/c/c_structs.php)
